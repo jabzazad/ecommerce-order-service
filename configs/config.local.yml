@@ -2,9 +2,9 @@
 APP:
   RELEASE: false
   ENV: "localhost"
-  PORT: 8001
+  PORT: 8002
   HOST: "https://localhost:3000"
-  API: "https://localhost:8001"
+  API: "https://localhost:8002"
   SECRETKEY: "63af325da4b94165aa1e65cd6869b7e743b5b7fc9d35e0358b42b4a623e2b045"
   DEFAULT_PROFILE: "https://media.istockphoto.com/illustrations/blank-man-profile-head-icon-placeholder-illustration-id1298261537?k=20&m=1298261537&s=170667a&w=0&h=6HzVJ1UqaJD_F8yyYP0Mk_gH1AKzBUkz5jZGnnK4INY="
 

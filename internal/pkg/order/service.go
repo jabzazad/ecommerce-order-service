@@ -64,7 +64,7 @@ func (s *service) Create(c *context.Context, form *request.CreateOrderRequest) (
 		"product_ids": productIDs,
 	}
 
-	url := fmt.Sprintf("%s%s", s.config.Product.URL, s.config.Product.Path.Product)
+	url := fmt.Sprintf("%s%s/ids", s.config.Product.URL, s.config.Product.Path.Product)
 	response := []*models.Product{}
 	err := s.clientService.GetRequest(url, header, param, &response)
 	if err != nil {
@@ -137,7 +137,7 @@ func (s *service) Create(c *context.Context, form *request.CreateOrderRequest) (
 	}
 
 	messageResponse := &models.Message{}
-	err = s.clientService.PutRequest(url, header, nil, body, messageResponse)
+	err = s.clientService.PostRequest(url, header, nil, body, messageResponse)
 	if err != nil {
 		return nil, err
 	}
@@ -179,7 +179,7 @@ func (s *service) Delete(c *context.Context, form *request.GetOne) error {
 		"product_ids": productIDs,
 	}
 
-	url := fmt.Sprintf("%s%s", s.config.Product.URL, s.config.Product.Path.Product)
+	url := fmt.Sprintf("%s%s/ids", s.config.Product.URL, s.config.Product.Path.Product)
 	response := []*models.Product{}
 	err = s.clientService.GetRequest(url, header, param, &response)
 	if err != nil {
@@ -234,7 +234,7 @@ func (s *service) Delete(c *context.Context, form *request.GetOne) error {
 	}
 
 	messageResponse := &models.Message{}
-	err = s.clientService.PutRequest(url, header, nil, body, messageResponse)
+	err = s.clientService.PostRequest(url, header, nil, body, messageResponse)
 	if err != nil {
 		return err
 	}
@@ -275,7 +275,7 @@ func (s *service) FindAll(c *context.Context, form *models.PageForm) (*models.Pa
 		"product_ids": productIDs,
 	}
 
-	url := fmt.Sprintf("%s%s", s.config.Product.URL, s.config.Product.Path.Product)
+	url := fmt.Sprintf("%s%s/ids", s.config.Product.URL, s.config.Product.Path.Product)
 	response := []*models.Product{}
 	err = s.clientService.GetRequest(url, header, param, &response)
 	if err != nil {
@@ -331,7 +331,7 @@ func (s *service) FindOne(c *context.Context, request *request.GetOne) (*models.
 		"product_ids": productIDs,
 	}
 
-	url := fmt.Sprintf("%s%s", s.config.Product.URL, s.config.Product.Path.Product)
+	url := fmt.Sprintf("%s%s/ids", s.config.Product.URL, s.config.Product.Path.Product)
 	response := []*models.Product{}
 	err = s.clientService.GetRequest(url, header, param, &response)
 	if err != nil {
