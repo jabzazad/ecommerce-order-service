@@ -2,8 +2,8 @@
 package healthcheck
 
 import (
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/handlers"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/handlers"
 
 	"github.com/gofiber/fiber/v2"
 )

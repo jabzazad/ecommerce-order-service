@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"ecommerce-user/internal/core/config"
+	"ecommerce-order/internal/core/config"
 	"fmt"
 	"os"
 	"runtime"

@@ -2,7 +2,9 @@ package repositories
 
 import (
 	"context"
+	"ecommerce-order/internal/models"
 	"fmt"
+	"math"
 	"time"
 
 	"gorm.io/gorm"
@@ -154,3 +156,38 @@ const (
 	// DefaultSize default size in page query
 	DefaultSize int = 20
 )
+
+// FindAllAndPageInformation get page information
+func (r *Repository) FindAllAndPageInformation(db *gorm.DB, pageForm PageForm, entities interface{}) (*models.PageInformation, error) {
+	var count int64
+	db.Model(entities).Count(&count)
+
+	page := pageForm.GetPage()
+	if pageForm.GetPage() < 1 {
+		page = DefaultPage
+	}
+
+	limit := pageForm.GetSize()
+	if pageForm.GetSize() == 0 {
+		limit = DefaultSize
+	}
+
+	var offset int
+	if page != 1 {
+		offset = (page - 1) * limit
+	}
+
+	if err := db.
+		Limit(limit).
+		Offset(offset).
+		Find(entities).Error; err != nil {
+		return nil, err
+	}
+
+	return &models.PageInformation{
+		Page:     page,
+		Size:     limit,
+		Count:    count,
+		LastPage: int(math.Ceil(float64(count) / float64(limit))),
+	}, nil
+}

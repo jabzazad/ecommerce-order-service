@@ -4,6 +4,13 @@ import (
 	"time"
 )
 
+const (
+	// OrderPrefix order prefix
+	OrderPrefix = "OR"
+	// TimeFormat time format for running number
+	TimeFormat = "20060102150405"
+)
+
 // OrderStatus order status
 type OrderStatus uint
 

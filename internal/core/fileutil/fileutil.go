@@ -2,7 +2,7 @@
 package fileutil
 
 import (
-	"ecommerce-user/internal/core/utils"
+	"ecommerce-order/internal/core/utils"
 	"fmt"
 	"io"
 	"log"

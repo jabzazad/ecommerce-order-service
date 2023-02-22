@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"ecommerce-user/internal/handlers/render"
+	"ecommerce-order/internal/handlers/render"
 
 	"github.com/gofiber/fiber/v2"
 )

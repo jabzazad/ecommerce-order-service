@@ -3,11 +3,11 @@ package routes
 
 import (
 	ctx "context"
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/handlers/middlewares"
-	"ecommerce-user/internal/pkg/healthcheck"
-	"ecommerce-user/internal/pkg/me"
-	"ecommerce-user/internal/pkg/user"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/handlers/middlewares"
+	"ecommerce-order/internal/pkg/healthcheck"
+	"ecommerce-order/internal/pkg/order"
+
 	"fmt"
 	"os"
 	"os/signal"
@@ -74,14 +74,12 @@ func NewRouter() {
 	healthz := v1.Group("healthz")
 	healthz.Get("/", healthzEndpoint.HealthCheck)
 
-	guestEndpoint := user.NewEndpoint()
-	guest := v1.Group("users")
-	guest.Post("/", guestEndpoint.CreateUser)
-
-	meEndpoint := me.NewEndpoint()
-	me := v1.Group("me", middlewares.Authorize())
-	me.Get("/", meEndpoint.GetProfile)
-	me.Get("/orders", meEndpoint.FindAllOrder)
+	orderEndpoint := order.NewEndpoint()
+	order := v1.Group("orders", middlewares.Authorize())
+	order.Get("/", orderEndpoint.FindAll)
+	order.Post("/", orderEndpoint.Create)
+	order.Get("/:id", orderEndpoint.FindOne)
+	order.Delete("/:id", orderEndpoint.Delete)
 
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)

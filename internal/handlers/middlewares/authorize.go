@@ -2,10 +2,10 @@
 package middlewares
 
 import (
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/context"
-	"ecommerce-user/internal/core/redis"
-	"ecommerce-user/internal/models"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/context"
+	"ecommerce-order/internal/core/redis"
+	"ecommerce-order/internal/models"
 	"strings"
 
 	"github.com/gofiber/fiber/v2"

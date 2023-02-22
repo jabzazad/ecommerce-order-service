@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/context"
-	"ecommerce-user/internal/core/utils"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/context"
+	"ecommerce-order/internal/core/utils"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"

@@ -1,4 +1,4 @@
-# ecommerce-user
+# ecommerce-order
 
 ## Getting started
 1. Download swag by using:

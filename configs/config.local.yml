@@ -14,7 +14,7 @@ HTTP_SERVER:
   IDLE_TIMEOUT: 120s
 
 STORAGE:
-  BUCKET_NAME: "ecommerce-users"
+  BUCKET_NAME: "ecommerce-orders"
   REGION: ""
   BASE_URL: "https://localhost:9000"
   ACCESS: "minioadmin"
@@ -25,7 +25,7 @@ POSTGRE_SQL:
   USERNAME: "root"
   PASSWORD: "P@sswrd"
   PORT: 5432
-  DATABASE_NAME: "ecommerce-users"
+  DATABASE_NAME: "ecommerce-orders"
   DRIVER_NAME: "postgres"
   ENABLE: true
 
@@ -50,7 +50,7 @@ JWT:
   SECRET: "39bcae4f93d4e3fcd034f146c6c54d1067221e6f83fe672170f96b86e0ef76d7"
   REFRESH_EXPIRATION_TIME: 168h0m0s
 
-ORDER:
-  URL: "https://localhost:8002/api/v1"
+PRODUCT:
+  URL: "https://localhost:8003/api/v1"
   PATH:
-    ORDER: "/order"
+    PRODUCT: "/product"

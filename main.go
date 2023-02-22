@@ -2,12 +2,11 @@
 package main
 
 import (
-	"ecommerce-user/docs"
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/firebaseauth"
-	"ecommerce-user/internal/core/redis"
-	"ecommerce-user/internal/core/sql"
-	"ecommerce-user/internal/handlers/routes"
+	"ecommerce-order/docs"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/redis"
+	"ecommerce-order/internal/core/sql"
+	"ecommerce-order/internal/handlers/routes"
 	"flag"
 	"fmt"
 
@@ -78,12 +77,6 @@ func main() {
 		panic(err)
 	}
 	//=======================================================
-
-	// Init firebase auth client
-	if err := firebaseauth.NewClient(config.CF.Firebase.CredentialsFile); err != nil {
-		panic(err)
-	}
-
 	// New router
 	routes.NewRouter()
 	//=======================================================

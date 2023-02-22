@@ -1,8 +1,8 @@
 package healthcheck
 
 import (
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/context"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/context"
 )
 
 // Service service interface

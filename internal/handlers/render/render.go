@@ -2,7 +2,7 @@
 package render
 
 import (
-	"ecommerce-user/internal/core/config"
+	"ecommerce-order/internal/core/config"
 
 	"github.com/gofiber/fiber/v2"
 )

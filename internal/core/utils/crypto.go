@@ -6,7 +6,7 @@ import (
 	"crypto/cipher"
 	"crypto/ecdsa"
 	"crypto/rand"
-	"ecommerce-user/internal/core/config"
+	"ecommerce-order/internal/core/config"
 	"encoding/hex"
 	"fmt"
 	"io"

@@ -1,4 +1,4 @@
-module ecommerce-user
+module ecommerce-order
 
 go 1.18
 

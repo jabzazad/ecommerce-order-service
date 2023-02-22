@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"ecommerce-user/internal/core/context"
+	"ecommerce-order/internal/core/context"
 
 	"github.com/gofiber/fiber/v2"
 )

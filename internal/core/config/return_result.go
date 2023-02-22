@@ -121,7 +121,6 @@ type ReturnResult struct {
 	AlreadyHaveOrder             Result `mapstructure:"already_have_order_nubmer"`
 	PleaseUploadOrder            Result `mapstructure:"please_upload_order"`
 	PleaseUploadProduct          Result `mapstructure:"please_upload_product"`
-	NotFoundAllItemInStock       Result `mapstructure:"not_found_all_item_in_shop_db"`
 	NotFoundEmailInSystem        Result `mapstructure:"not_found_email_in_system"`
 	ReachMaximumUpload           Result `mapstructure:"reach_maximum_upload"`
 	CannotSetHLWW                Result `mapstructure:"cannot_set_hlww"`
@@ -131,6 +130,7 @@ type ReturnResult struct {
 	SuspenCall                   Result `mapstructure:"suspen_call"`
 	PleaseChangePassword         Result `mapstructure:"please_change_password"`
 	AlreadyUsedLastPassword      Result `mapstructure:"already_used_last_password"`
+	OutOfStock                   Result `mapstructure:"out_of_stock"`
 	Internal                     struct {
 		Success          Result `mapstructure:"success" json:"success"`
 		General          Result `mapstructure:"general" json:"general"`

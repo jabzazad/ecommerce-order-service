@@ -4,10 +4,10 @@ package handlers
 import (
 	"reflect"
 
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/context"
-	"ecommerce-user/internal/handlers/render"
-	"ecommerce-user/internal/models"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/context"
+	"ecommerce-order/internal/handlers/render"
+	"ecommerce-order/internal/models"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"

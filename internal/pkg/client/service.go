@@ -1,8 +1,8 @@
 package client
 
 import (
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/models"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/models"
 
 	"github.com/imroc/req"
 	"github.com/sirupsen/logrus"

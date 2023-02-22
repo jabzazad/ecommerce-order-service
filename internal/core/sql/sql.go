@@ -2,7 +2,7 @@
 package sql
 
 import (
-	"ecommerce-user/internal/core/config"
+	"ecommerce-order/internal/core/config"
 	"fmt"
 
 	"gorm.io/driver/postgres"

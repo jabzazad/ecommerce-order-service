@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"ecommerce-user/internal/core/context"
-	"ecommerce-user/internal/core/sql"
+	"ecommerce-order/internal/core/context"
+	"ecommerce-order/internal/core/sql"
 
 	"gorm.io/gorm"
 

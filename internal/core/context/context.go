@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"strconv"
 
-	"ecommerce-user/internal/core/config"
-	"ecommerce-user/internal/core/sql"
-	"ecommerce-user/internal/core/utils"
-	"ecommerce-user/internal/models"
+	"ecommerce-order/internal/core/config"
+	"ecommerce-order/internal/core/sql"
+	"ecommerce-order/internal/core/utils"
+	"ecommerce-order/internal/models"
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/valyala/fasthttp"

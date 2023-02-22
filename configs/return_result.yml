@@ -366,6 +366,11 @@ already_used_last_password:
     en: "Sorry, your new password is already.Please change new password"
     th: "ขออภัย รหัสผ่านของท่านเคยถูกใช้งานแล้ว กรุณาเปลี่ยนรหัสผ่านใหม่"
 
+out_of_stock:
+  code: 1057
+  localization:
+    en: "Sorry, this product is out of stock."
+    th: "ขออภัย สินค้านี้หมดสต็อกแล้ว"
 
 # These are what we response to our internal services
 internal:

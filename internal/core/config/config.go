@@ -69,12 +69,12 @@ type Configs struct {
 		WriteTimeout time.Duration `mapstructure:"WRITE_TIMEOUT"`
 		IdleTimeout  time.Duration `mapstructure:"IDLE_TIMEOUT"`
 	} `mapstructure:"HTTP_SERVER"`
-	Order struct {
+	Product struct {
 		URL  string `mapstructure:"URL"`
 		Path struct {
-			Order string `mapstructure:"ORDER"`
+			Product string `mapstructure:"PRODUCT"`
 		} `mapstructure:"PATH"`
-	} `mapstructure:"ORDER"`
+	} `mapstructure:"PRODUCT"`
 	PostgreSQL DatabaseConfig `mapstructure:"POSTGRE_SQL"`
 	Swagger    struct {
 		Title       string   `mapstructure:"TITLE"`
