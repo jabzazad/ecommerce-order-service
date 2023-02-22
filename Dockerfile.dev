@@ -30,4 +30,4 @@ ENV TZ=Asia/Bangkok
 
 ENTRYPOINT ["/api", "-environment", "dev"]
 
-EXPOSE 8000
+EXPOSE 8002
